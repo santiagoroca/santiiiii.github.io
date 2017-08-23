@@ -26,14 +26,34 @@
         <link rel="stylesheet" href="fonts/font-awesome.min.css">
         <link rel="stylesheet" href="css/styles.css">
 
-        <script type="application/javascript" src="config.js"></script>
-
         <script id="YouBIMViewerImport" type="application/javascript" src="app.min.js"></script>
 
         <!-- <script src="https://jsconsole.com/js/remote.js?3a353358-cf6e-418c-bcb7-2b7609a942f3"></script> -->
 
     </body>
     <script>
+	var config = {
+    settings:{
+        building: 'Wellington',
+        userToken: 'YBV',
+        alphaChannel: 0.35,
+        restUrl: 'https://santiiiii.github.io',
+        socketUrl: 'wss://local.youbim.com:8443/',
+        canvasContainer: document.getElementById('YouBIMViewer'),
+        canvasId: 'viewer',
+
+        toolbar: {
+            actionBar: true,
+            systemPanel: true,
+            savedViews: true
+        }
+
+    }
+};
+
+THRESHOLD = 1;
+~                
+
         var YBViewerInstance;
 
         var View = {
