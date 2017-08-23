@@ -1,1 +1,137 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            body {
+                margin: 0
+            }
+
+            .metrics--wrapper {
+                position: absolute;
+                padding: 5px;
+                background: rgba(0,0,0,0.5);
+                z-index: 10000;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="YouBIMViewer"></div>
+
+
+        <link rel="stylesheet" href="fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script type="application/javascript" src="config.js"></script>
+
+        <script id="YouBIMViewerImport" type="application/javascript" src="app.min.js"></script>
+
+        <!-- <script src="https://jsconsole.com/js/remote.js?3a353358-cf6e-418c-bcb7-2b7609a942f3"></script> -->
+
+    </body>
+    <script>
+        var YBViewerInstance;
+
+        var View = {
+
+            settings: config.settings,
+
+            render: function () {
+                var that = this;
+
+                var building = decodeURIComponent((new RegExp('[?|&]building=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+
+                if (building) {
+                    config.settings.building = building;
+                }
+                
+                YBViewerInstance = YBVIEWER (this.settings);
+
+                YBViewerInstance.addEventListener('nodeerror', function (data) {
+                    console.log (data);
+                });
+
+                YBViewerInstance.addEventListener('secboxdragstart', function () {
+                    //console.log ('DRAG START');
+                });
+
+                YBViewerInstance.addEventListener('secboxdragend', function () {
+                    //console.log ('DRAG END');
+                });
+
+                YBViewerInstance.addEventListener('raycasthit', function (data) {
+                    console.log (data);
+                });
+
+                YBViewerInstance.addEventListener('enabledfeatures', function (data) {
+                    console.log (data);
+                });
+
+                YBViewerInstance.addEventListener('disabledfeatures', function (data) {
+                    console.log (data);
+                });
+
+                document.addEventListener('keydown', function (evt) {
+
+                    if (evt.ctrlKey && evt.altKey) {
+                        evt.stopPropagation();
+
+                        switch (evt.keyCode) {
+
+                            case 81: {
+                                YBViewerInstance.enableSectioningTool ();
+                            } break;
+
+                            case 87: {
+                                YBViewerInstance.disableSectioningTool ();
+                            } break;
+
+                            //e
+                            case 69: {
+                                YBViewerInstance.enableSectioningBox ();
+                            } break;
+
+                            //d
+                            case 68: {
+                                YBViewerInstance.disableSectioningBox ();
+                            } break;
+
+                            //r
+                            case 82: {
+                                YBViewerInstance.resetSectioningBox ();
+                            } break;
+
+                            //f12
+                            case 122: {
+                                alert ('Sectioning Tool is ' + (YBViewerInstance.SEC_TOOL_ON() ? 'enabled' : 'disabled'));
+                            } break;
+
+                            //f12
+                            case 123: {
+                                alert ('Sectioning Box is ' + (YBViewerInstance.SEC_BOX_ON() ? 'enabled' : 'disabled'));
+                            } break;
+
+                            case 67: {
+                                YBViewerInstance.lookAt ([{GUID: last_id}]);
+                            } break;
+
+                        }
+                    }
+
+                });
+            },
+
+            remove: function () {
+                this.$el.addClass('hidden');
+            }
+
+        };
+
+        View.render();
+
+    </script>
+</html>
