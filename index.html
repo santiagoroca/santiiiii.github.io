@@ -1,157 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <style>
-            body {
-                margin: 0
-            }
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Responsive bootstrap landing template">
+        <meta name="author" content="Themeswale">
 
-            .metrics--wrapper {
-                position: absolute;
-                padding: 5px;
-                background: rgba(0,0,0,0.5);
-                z-index: 10000;
-                top: 0;
-                right: 0;
-            }
-        </style>
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <title>Ablogia - Responsive Blog Theme</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Owl Carousel CSS -->
+        <link href="css/owl-carousel.css" rel="stylesheet">
+
+        <!-- Icon CSS -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+
     </head>
+
+
     <body>
 
-        <div id="YouBIMViewer"></div>
+        <!-- Search input -->
+        <div class="search-wrap" id="search-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="search-bar">
+                            <form>
+                                <input class="search-input" type="search" placeholder="Search" />
+                            </form>
+                            <a href="javascript:void(0);" class="close-search toggle-search" data-target="#search-wrap">
+                                <i class="mdi mdi-close-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-        <link rel="stylesheet" href="fonts/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <section>
+            <div class="main-slider basic-slider">
+                <div class="main-slide">
+                    <img src="images/f0035247.png" alt="" />
+                    <div class="slide-title">
+                        <a class="cat-text" href="#" title="">React Native</a>
+                        <h2><a href="react-native-sagas.html" title="">React Components and Sagas</a></h2>
+                        <ul class="meta"><li><a href="standard-post.html" title="">October 23 - 2017</a></li></ul>
+                    </div>
+                </div>
+                <div class="main-slide">
+                    <img src="images/f0035247.png" alt="" />
+                    <div class="slide-title">
+                        <a class="cat-text" href="#" title="">React Native</a>
+                        <h2><a href="react-native-sagas.html" title="">React Components and Sagas</a></h2>
+                        <ul class="meta"><li><a href="standard-post.html" title="">October 23 - 2017</a></li></ul>
+                    </div>
+                </div>
+            </div><!-- Slider -->
+        </section>
 
-        <script id="YouBIMViewerImport" type="application/javascript" src="app.min.js"></script>
 
-        <!-- <script src="https://jsconsole.com/js/remote.js?3a353358-cf6e-418c-bcb7-2b7609a942f3"></script> -->
+        <section class="section">
+            <div class="container">
+
+                <div class="row">
+                        <!-- Content-->
+                        <div class="col-lg-8">
+
+                            <!-- Post-->
+                            <article class="post">
+                                <div class="text-center post-header">
+                                    <a class="badge badge-custom" href="#" title="">React Native</a>
+                                    <h2 class="post-title"><a href="standard-post.html" title="">React Components and Sagas</a></h2>
+                                    <a href="standard-post.html" title="" class="post-date">October 23 - 2017</a>
+                                </div>
+
+                                <div class="post-preview">
+                                    <img src="images/redux-saga.png" alt="" class="img-fluid rounded">
+                                </div>
+
+                                <div class="post-content">
+                                    <p>Sagas was introduced a while ago as a system for queing asynchronous tasks on MySQL databases. Its concept is also useful for building asynchronous apps and relying all the 
+                                    business logic to a diferent model, keeping, thus, a clean component respoding to data changes.</p>
+                                </div>
+
+                                <div class="text-center"><a href="react-native-sagas.html" class="btn btn-outline-custom">Continue Reading <i class="mdi mdi-arrow-right"></i></a></div>
+
+                            </article>
+
+                        </div>
+                        <!-- Content end-->
+
+
+                        <!-- Sidebar-->
+                        <!--<div class="col-lg-4">
+                            <div class="sidebar">
+
+                                <aside class="widget">
+                                    <div class="widget-title">About Me</div>
+
+                                    <div class="about-widget">
+                                        <img src="images/photo.jpg" alt="About Me" class="rounded-circle">
+
+                                        <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet pede, consectetur neque risus.</p>
+
+                                        <a href="#" class="btn-read-more mt-2">Read More <i class="mdi mdi-arrow-right"></i></a>
+                                    </div>
+                                </aside>
+
+                            </div>
+                        </div>-->
+                    </div>
+
+            </div> <!-- end container -->
+        </section>
+
+
+        <footer>
+
+        <!-- copy-wrapper -->
+        <div class="copy-wrapper">
+            <div class="container">
+                <ul class="socials right-socials">
+                    <li><a href="https://www.linkedin.com/in/santiago-nicolas-roca-535b2475/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/santiiiii"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- end copy-wrapper -->
+    </footer>
+
+
+		<script src="https://use.fontawesome.com/127a510a54.js"></script>
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <!--common script for all pages-->
+        <script src="js/jquery.app.js"></script>
 
     </body>
-    <script>
-	var config = {
-    settings:{
-        building: 'Wellington',
-        userToken: 'YBV',
-        alphaChannel: 0.35,
-        restUrl: 'https://santiiiii.github.io',
-        socketUrl: 'wss://local.youbim.com:8443/',
-        canvasContainer: document.getElementById('YouBIMViewer'),
-        canvasId: 'viewer',
-
-        toolbar: {
-            actionBar: true,
-            systemPanel: true,
-            savedViews: true
-        }
-
-    }
-};
-
-THRESHOLD = 1;
-~                
-
-        var YBViewerInstance;
-
-        var View = {
-
-            settings: config.settings,
-
-            render: function () {
-                var that = this;
-
-                var building = decodeURIComponent((new RegExp('[?|&]building=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
-
-                if (building) {
-                    config.settings.building = building;
-                }
-                
-                YBViewerInstance = YBVIEWER (this.settings);
-
-                YBViewerInstance.addEventListener('nodeerror', function (data) {
-                    console.log (data);
-                });
-
-                YBViewerInstance.addEventListener('secboxdragstart', function () {
-                    //console.log ('DRAG START');
-                });
-
-                YBViewerInstance.addEventListener('secboxdragend', function () {
-                    //console.log ('DRAG END');
-                });
-
-                YBViewerInstance.addEventListener('raycasthit', function (data) {
-                    console.log (data);
-                });
-
-                YBViewerInstance.addEventListener('enabledfeatures', function (data) {
-                    console.log (data);
-                });
-
-                YBViewerInstance.addEventListener('disabledfeatures', function (data) {
-                    console.log (data);
-                });
-
-                document.addEventListener('keydown', function (evt) {
-
-                    if (evt.ctrlKey && evt.altKey) {
-                        evt.stopPropagation();
-
-                        switch (evt.keyCode) {
-
-                            case 81: {
-                                YBViewerInstance.enableSectioningTool ();
-                            } break;
-
-                            case 87: {
-                                YBViewerInstance.disableSectioningTool ();
-                            } break;
-
-                            //e
-                            case 69: {
-                                YBViewerInstance.enableSectioningBox ();
-                            } break;
-
-                            //d
-                            case 68: {
-                                YBViewerInstance.disableSectioningBox ();
-                            } break;
-
-                            //r
-                            case 82: {
-                                YBViewerInstance.resetSectioningBox ();
-                            } break;
-
-                            //f12
-                            case 122: {
-                                alert ('Sectioning Tool is ' + (YBViewerInstance.SEC_TOOL_ON() ? 'enabled' : 'disabled'));
-                            } break;
-
-                            //f12
-                            case 123: {
-                                alert ('Sectioning Box is ' + (YBViewerInstance.SEC_BOX_ON() ? 'enabled' : 'disabled'));
-                            } break;
-
-                            case 67: {
-                                YBViewerInstance.lookAt ([{GUID: last_id}]);
-                            } break;
-
-                        }
-                    }
-
-                });
-            },
-
-            remove: function () {
-                this.$el.addClass('hidden');
-            }
-
-        };
-
-        View.render();
-
-    </script>
 </html>
