@@ -174,9 +174,9 @@
          var animate = function(time) {
 
             var dt = time-time_old;
-            rotateZ(mov_matrix, dt*0.005);//time
-            rotateY(mov_matrix, dt*0.002);
-            rotateX(mov_matrix, dt*0.003);
+            rotateZ(mov_matrix, dt*0.0005);//time
+            rotateY(mov_matrix, dt*0.0002);
+            rotateX(mov_matrix, dt*0.0003);
             time_old = time;
 
             gl.enable(gl.DEPTH_TEST);
